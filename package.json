@@ -1,0 +1,23 @@
+{
+  "name": "my-gf-portal",
+  "version": "1.0.0",
+  "description": "Love you Jaan \u2764 \u2013 My GF Portal",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.5.3",
+    "morgan": "^1.10.0"
+  }
+}

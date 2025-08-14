@@ -1,0 +1,71 @@
+:root{
+  --pink:#ff6aa2;
+  --violet:#b86bff;
+}
+*{box-sizing:border-box}
+body.login-bg{
+  min-height:100vh;
+  background: linear-gradient(135deg, rgba(255,106,162,0.25), rgba(184,107,255,0.25)), radial-gradient(1200px 600px at 10% 10%, rgba(255,106,162,0.15), transparent), #fff;
+  overflow:hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+.text-gradient{
+  background: linear-gradient(90deg, var(--pink), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.login-card{
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.form-box{
+  height: 200px; /* playground for the button */
+  margin-top: 10px;
+  background: #fff7fb;
+  border: 1px dashed #ffd2e5;
+  border-radius: 14px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+}
+#loginBtn{
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.18s ease;
+}
+/* Floating Hearts (pure CSS) */
+.hearts{ position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+.hearts span{
+  position: absolute; width: 16px; height: 16px;
+  background: linear-gradient(135deg, #ff8db8, #ffc0d6);
+  transform: rotate(45deg);
+  border-radius: 0 50% 50% 50%;
+  opacity: 0.7;
+  animation: floatUp 10s linear infinite;
+}
+.hearts span:nth-child(1){ left: 10%; animation-duration: 12s; }
+.hearts span:nth-child(2){ left: 20%; animation-delay: 2s; }
+.hearts span:nth-child(3){ left: 30%; animation-duration: 11s; animation-delay: 4s; }
+.hearts span:nth-child(4){ left: 40%; animation-delay: 1s; }
+.hearts span:nth-child(5){ left: 50%; animation-duration: 9s; animation-delay: 3s; }
+.hearts span:nth-child(6){ left: 60%; animation-delay: 5s; }
+.hearts span:nth-child(7){ left: 70%; animation-duration: 13s; }
+.hearts span:nth-child(8){ left: 80%; animation-delay: 6s; }
+.hearts span:nth-child(9){ left: 15%; animation-duration: 14s; animation-delay: 1s; }
+.hearts span:nth-child(10){ left: 65%; animation-duration: 10s; animation-delay: 2s; }
+.hearts span:nth-child(11){ left: 85%; animation-duration: 12s; animation-delay: 4s; }
+.hearts span:nth-child(12){ left: 35%; animation-duration: 9s; animation-delay: 6s; }
+@keyframes floatUp{
+  0%{ transform: translateY(110vh) rotate(45deg) scale(0.8); opacity: 0; }
+  10%{ opacity: 0.7; }
+  100%{ transform: translateY(-10vh) rotate(45deg) scale(1.2); opacity: 0; }
+}
+/* Ensure content over hearts */
+.login-card{ position: relative; z-index: 1; }
