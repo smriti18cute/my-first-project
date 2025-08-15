@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "20.13.1"
+  },
   "name": "my-gf-portal",
   "version": "1.0.0",
   "description": "Love you Jaan \u2764 \u2013 My GF Portal",
